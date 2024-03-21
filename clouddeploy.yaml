@@ -1,0 +1,12 @@
+name: cac-simple-webapp
+
+target:
+  kind: Deployment
+  name: cac-simple-webapp
+
+config:
+  name: cac-simple-webapp
+  container:
+    image: gcr.io/$PROJECT_ID/cac-simple-webapp:$COMMIT_SHA
+    ports:
+    - containerPort: 3000
